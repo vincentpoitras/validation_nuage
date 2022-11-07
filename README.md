@@ -10,7 +10,7 @@
     - CALISPO: hdf --> NetCDF
     - MODIS  : hdf --> NetCDF
   4. cosp2_input (à venir)
-    - Généreration des fichiers d'entrée nécessaire pour faire rouler COSP2
+    - Généreration des fichiers d'entrée nécessaire pour faire rouler COSP2 (à partir des données de GEM5)
   5. cosp2_output (à venir)
     - Configuration de COSP2
   6. analysis_and_figures (à venir)
