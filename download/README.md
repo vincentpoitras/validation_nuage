@@ -5,10 +5,10 @@ La simulation a été effectuée sur narval. Ce script sert à transférer les d
 sur pampa.
 
 ## Liste des fichiers
-  - GEM_download.bash  
+  - GEM\_download.bash  
   
 ## Exemple de soumission:  
-YYYY=2014; soumet GEM_download.bash -args $YYYY -jn GEM_download\_${YYYY} -t 17280  
+YYYY=2014; soumet GEM\_download.bash -args $YYYY -jn GEM\_download\_${YYYY} -t 17280  
 
 
 ## Notes:
@@ -24,15 +24,15 @@ YYYY=2014; soumet GEM_download.bash -args $YYYY -jn GEM_download\_${YYYY} -t 172
 
 # MODIS
 ## Description
-Ce script sert à télécharger les données des produits  MOD06_L2 (Terra) et 
-MYD06_L2 (Aqua).
+Ce script sert à télécharger les données des produits  MOD06\_L2 (Terra) et 
+MYD06\_L2 (Aqua).
 
 ## Liste des fichiers
-  - MODIS_download.bash
+  - MODIS\_download.bash
   
 ## Exemple de soumission:  
-dataset=MYD06_L2; YYYY=2015; dddi=334; dddf=365;  
-soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}\_downloadi\_${YYYY}\_${dddi}-${dddf} -t 86400
+dataset=MYD06\_L2; YYYY=2015; dddi=334; dddf=365;  
+soumet MODIS\_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}\_downloadi\_${YYYY}\_${dddi}-${dddf} -t 86400
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 2 semaines (avec 4 cpus)
@@ -55,15 +55,15 @@ soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}\_down
 
 # CALIPSO
 ## Description
-Ce script sert à télécharger les données du produit CAL_LID_L2_05kmCPro-Standard-V4
+Ce script sert à télécharger les données du produit CAL\_LID\_L2\_05kmCPro-Standard-V4
 
 ## Liste des fichiers
-  - CALIPSO_download.bash  
-  - CAL_LID_L2_2014.txt
-  - CAL_LID_L2_2015.txt
+  - CALIPSO\_download.bash  
+  - CAL\_LID\_L2\_2014.txt
+  - CAL\_LID\_L2\_2015.txt
 
 ## Exemple de soumission:  
-YYYY=2014; soumet CALIPSO_download.bash -args $YYYY -jn CALIPSO_download\_${YYYY} -t 345600
+YYYY=2014; soumet CALIPSO\_download.bash -args $YYYY -jn CALIPSO\_download\_${YYYY} -t 345600
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 3 jours
