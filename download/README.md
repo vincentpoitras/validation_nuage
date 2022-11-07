@@ -8,9 +8,9 @@ sur pampa.
   - GEM\_download.bash  
   
 ## Exemple de soumission:  
-YYYY=2014; soumet GEM\_download.bash \-args \${YYYY} \-jn GEM\_download\_\${YYYY} \-t 17280  
-YYYY=2014; soumet GEM\_download.bash  \$YYYY \-jn GEM\_download\_\${YYYY} \-t 17280 
-YYYY=2014; soumet GEM\_download.bash \-args  \-jn GEM\_download\_\${YYYY} \-t 17280 
+YYYY=2014; soumet GEM\_download.bash \-args GEM\_download\_\${YYYY} \-jn GEM\_download\_\${YYYY} \-t 17280  
+
+
 
 ## Notes:
   1. Temps de téléchargement (1 année): moins de 24 heures
