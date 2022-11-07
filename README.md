@@ -14,5 +14,5 @@
   5. cosp2_output (à venir)
     - Configuration de COSP2
   6. analysis_and_figures (à venir)
-    - Scripts utilisé pour l'analyse et la production de figures
+    - Scripts utilisés pour l'analyse et la production de figures
 </pre>
