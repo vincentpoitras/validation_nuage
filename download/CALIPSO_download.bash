@@ -30,7 +30,7 @@ files_list=/home/poitras/validation_des_nuages/download/CAL_LID_L2_${YYYY}.txt
 
 
 # Check wheter the output_directory and the file_list are existing
-[ -d $output_directory ] || { echo $output_directory does not exist. It will be created; mkdir -p $output_directory }
+[ -d $output_directory ] || { echo $output_directory does not exist. It will be created; mkdir -p $output_directory; }
 [ -f $files_list       ] || { echo $files_list does not exist. EXIT; exit; }
 
 # Moveing into the output_directory (this cannot be specified when we are dowloading files witrh curl)
