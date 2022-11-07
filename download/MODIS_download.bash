@@ -8,14 +8,15 @@
 # How to launch this script
 #	Scheduler  : dataset=MYD06_L2; YYYY=2015; dddi=334; dddf=365; soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}_download_${YYYY}_${dddi}-${dddf} -t 86400 
 #       Interactive: ./MODIS_download.bash MYD06_L2 2015 334 365 
-#
+#       
 # Notes
 #	[1] Download estimate time (for 3 month): ~2 weeks
-#       [2] The downloading is very inefficient since we should dowload individualy each file
+#       [2] dddi and dddf are the day of the year (1-366)
+#       [3] The downloading is very inefficient since we should dowload individualy each file
 #           There is a file each 5 min --> 288 / day
 #           wget must (re)*connect several time before to complete succesfuly a download
 #           For future usage, we may explore wheter lftp is more efficient (it would allow to dowload an entire "folder" (each day ~ a folder with 288 files)
-#       [3] The authorization key maybe generated on the website
+#       [4] The authorization key maybe generated on the website
 
 ##########################################################################################################################################################################################
 
