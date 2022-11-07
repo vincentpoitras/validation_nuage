@@ -31,8 +31,8 @@ MYD06_L2 (Aqua).
   - MODIS_download.bash
   
 ## Exemple de soumission:  
-dataset=MYD06_L2; YYYY=2015; dddi=334; dddf=365; 
-soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}_download_${YYYY}\_${dddi}-${dddf} -t 86400
+dataset=MYD06_L2; YYYY=2015; dddi=334; dddf=365;  
+soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}\_downloadi\_${YYYY}\_${dddi}-${dddf} -t 86400
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 2 semaines (avec 4 cpus)
