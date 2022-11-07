@@ -24,7 +24,7 @@ YYYY=$1
 
 # Hardcoded parameters
 username=vincentpoitras
-password=PASSWORD_TO_BE_EDITED
+password=PASSWORD
 output_directory=/pampa/poitras/DATA/CALIPSO/CAL_LID_L2_05kmCPro-Standard-V4/hdf/$YYYY
 files_list=/home/poitras/validation_des_nuages/download/CAL_LID_L2_${YYYY}.txt
 
@@ -60,7 +60,6 @@ cd $output_directory
         #read -s -p "Password: " password
         echo "machine urs.earthdata.nasa.gov login $username password $password" >> $netrc
         echo
-	cat $netrc
     }
 
     exit_with_error() {
