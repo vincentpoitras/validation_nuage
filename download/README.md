@@ -33,7 +33,7 @@ MYD06\_L2 (Aqua).
   
 ## Exemple de soumission:  
 dataset=MYD06\_L2; YYYY=2015; dddi=334; dddf=365;  
-soumet MODIS\_download.bash -args $dataset \$YYYY \$dddi \$dddf -jn \${dataset}\_download\_\${YYYY}\_\${dddi}-${dddf} -t 86400
+soumet MODIS\_download.bash -args $dataset &nbsp;$YYYY &nbsp;$dddi &nbsp;$dddf -jn &nbsp;${dataset}\_download\_\${YYYY}\_\${dddi}-${dddf} -t 86400
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 2 semaines (avec 4 cpus)
@@ -64,7 +64,7 @@ Ce script sert à télécharger les données du produit CAL\_LID\_L2\_05kmCPro-S
   - CAL\_LID\_L2\_2015.txt
 
 ## Exemple de soumission:  
-YYYY=2014; soumet CALIPSO\_download.bash -args \$YYYY -jn CALIPSO\_download\_\${YYYY} -t 345600
+YYYY=2014; soumet CALIPSO\_download.bash -args &nbsp;$YYYY -jn CALIPSO\_download\_\${YYYY} -t 345600
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 3 jours
