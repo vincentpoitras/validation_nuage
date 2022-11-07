@@ -8,7 +8,7 @@ sur pampa.
   - GEM_download.bash  
   
 ## Exemple de soumission:  
-YYYY=2014; soumet GEM_download.bash -args $YYYY -jn GEM_download_${YYYY} -t 17280  
+YYYY=2014; soumet GEM_download.bash -args $YYYY -jn GEM_download\_${YYYY} -t 17280  
 
 
 ## Notes:
@@ -32,7 +32,7 @@ MYD06_L2 (Aqua).
   
 ## Exemple de soumission:  
 dataset=MYD06_L2; YYYY=2015; dddi=334; dddf=365; 
-soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}_download_${YYYY}_${dddi}-${dddf} -t 86400
+soumet MODIS_download.bash -args $dataset $YYYY $dddi $dddf -jn ${dataset}_download_${YYYY}\_${dddi}-${dddf} -t 86400
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 2 semaines (avec 4 cpus)
@@ -63,7 +63,7 @@ Ce script sert à télécharger les données du produit CAL_LID_L2_05kmCPro-Stan
   - CAL_LID_L2_2015.txt
 
 ## Exemple de soumission:  
-YYYY=2014; soumet CALIPSO_download.bash -args $YYYY -jn CALIPSO_download_${YYYY} -t 345600
+YYYY=2014; soumet CALIPSO_download.bash -args $YYYY -jn CALIPSO_download\_${YYYY} -t 345600
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 3 jours
