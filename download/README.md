@@ -17,7 +17,7 @@ YYYY=2014; soumet GEM\_download.bash \-args &nbsp;$YYYY \-jn GEM\_download\_\${Y
   2. Pour télécharger step0 (requis pour créer le masque terre-mer), il suffit 
   de mettre YYYY=step0
   3. Le réperoire de sortie est "hardcodé" dans le script mais peut évidemment
-  être édité au besoin.
+  être édité au besoin. Même remarque pour le répertoire source sur narval.
   
 
 
@@ -40,11 +40,11 @@ soumet MODIS\_download.bash -args &nbsp;$dataset &nbsp;$YYYY &nbsp;$dddi &nbsp;$
   2. Le téléchargement de ces produits est particulièrement inefficace car on
   doit télécharger chaque fichier individuellement (il y en 12 par heures) et 
   wget doit se (re)-connecter à plusieurs reprise avant de pouvoir compléter un
-  téléchargement avec succès. Un piste à explorer pour un futur usgae serait 
+  téléchargement avec succès. Un piste à explorer pour un futur usage serait 
   d'utiliser lftp (pour télécharger un "répertoire" au complet -- chaque 
   "répertoire" correspond à un jour --> 24 x 12 = 288 fichiers).
   4. Si on s'interesse à la plage de données de 2014-2015, on doit aussi 
-  télécharger la première demi-heure de 2013 et la première de 2016.
+  télécharger la dernière demi-heure de 2013 et la première de 2016.
   5. dddi et dddf font référence au jour de l'année (1 à 366)
   6. Un clé d'authorisation doit être générée sur le site web (voir ci-dessous).
   7. Le réperoire de sortie est "hardcodé" dans le script mais peut évidemment
@@ -69,8 +69,8 @@ YYYY=2014; soumet CALIPSO\_download.bash -args &nbsp;$YYYY -jn CALIPSO\_download
 
 ## Notes:
   1. Temps de téléchargement (1 année): environ 3 jours
-  2. En plus du script de téléchargement, un lsite des fichiers à télécharger 
-  est nécessaire. Cette liste peut être générer en se connecctant au site de
+  2. En plus du script de téléchargement, un liste des fichiers à télécharger 
+  est nécessaire. Cette liste peut être générée en se connectant au site de
   téléchargement (voir ci-dessous).
   3. Un nom d'usager et un mot de passe sont requis pour télécharger les 
   données (on doit donc s'inscrire au site de téléchargeemnt - voir ci-dessous).
