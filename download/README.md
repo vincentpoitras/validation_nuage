@@ -45,8 +45,9 @@ soumet MODIS\_download.bash -args &nbsp;$dataset &nbsp;$YYYY &nbsp;$dddi &nbsp;$
   "répertoire" correspond à un jour --> 24 x 12 = 288 fichiers).
   4. Si on s'interesse à la plage de données de 2014-2015, on doit aussi 
   télécharger la première demi-heure de 2013 et la première de 2016.
-  5. Un clé d'authorisation doit être générée sur le site web (voir ci-dessous).
-  6. Le réperoire de sortie est "hardcodé" dans le script mais peut évidemment
+  5. dddi et dddf font référence au jour de l'année (1 à 366)
+  6. Un clé d'authorisation doit être générée sur le site web (voir ci-dessous).
+  7. Le réperoire de sortie est "hardcodé" dans le script mais peut évidemment
   être édité au besoin.
 
 ## Références
