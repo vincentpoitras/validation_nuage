@@ -7,8 +7,8 @@
 #
 #
 # Comment lancé le script
-# 	Interactif : ./GEM5_fstd2nc.bash 201401
-# 	Ordonnaceur: YYYYMM=201401; soumet $(pwd)/GEM5_fstd2nc.bash -args $YYYYMM -jn format_GEM5_${YYYYMM} -t 43200
+# 	Interactif : ./GEM5_format.bash 201401
+# 	Ordonnaceur: YYYYMM=201401; soumet $(pwd)/GEM5_format.bash -args $YYYYMM -jn format_GEM5_${YYYYMM} -t 43200
 #
 # Note:
 #	[1] Pour formater le pas de temps "0" (qui peut contenir des valeurs initiales, mais surtout des champs geophysiques statiques)
