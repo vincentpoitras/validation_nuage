@@ -9,10 +9,10 @@
     - Téléchargement des données de MODIS
     - Téléchargement des données de CALIPSO
 
-  3. format (à venir)
+  3. format 
     - GEM5   : fst --> NetCDF
     - CALISPO: hdf --> NetCDF
-    - MODIS  : hdf --> NetCDF
+    - MODIS  : hdf --> NetCDF (à venir)
 
   4. cosp2_input (à venir)
     - Généreration des fichiers d'entrée nécessaire pour faire rouler COSP2 (à partir des données de GEM5)
