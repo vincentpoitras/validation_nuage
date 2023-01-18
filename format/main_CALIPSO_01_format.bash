@@ -98,7 +98,7 @@ for file in $files; do
 		$h4tonccf_nc4 $file_hdf $file_cdf &> /dev/null 
 
 		# STEP 3: Fix the attributes
-		#python $format_attributes $file_cdf 
+		python $format_attributes $file_cdf 
         	
 		echo $file_cdf was created
 	else
