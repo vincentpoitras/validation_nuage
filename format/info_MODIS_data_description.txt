@@ -1,0 +1,383 @@
+==================================== Statistics_1km_sds_NONEOS ====================================
+                                                                                    
+Statistics_1km:                                                                     
+  1. Successful Retrieval Rate (%)                                                  
+  2. Land Cover Fraction (%)                                                        
+  3. Water Cover Fraction (%)                                                       
+  4. Snow Cover Fraction (%)                                                        
+  5. Cloud Cover Fraction (%)                                                       
+  6. Water Cloud Detected (%)                                                       
+  7. Ice Cloud Detected (%)                                                         
+  8. Mean of Water Cloud Optical Thickness                                          
+  9. Mean of Ice Cloud Optical Thickness                                            
+  10. Mean of Water Cloud Effective Particle Radius (microns)                       
+  11. Mean of Ice Cloud Effective Diameter (microns)                                
+  12. Mean Liquid Water Cloud Top Pressure (mb)                                     
+  13. Mean Ice Cloud Top Pressure (mb)                                              
+  14. Mean Undetermined Cloud Top Pressure (mb)                                     
+  15. Mean Liquid Water Cloud Top Temperature (K)                                   
+  16. Mean Ice Cloud Top Temperature (K)                                            
+  17. Mean Undetermined Cloud Top Temperature (K)                                   
+
+==================================== Asymmetry_Parameter_Ice ====================================
+Ice Asymmetry Parameter from the phase functions used to generate the forward lookup
+
+==================================== Asymmetry_Parameter_Liq ====================================
+Liquid Water Asymmetry Parameter from the phase functions used to generate the forwa
+
+==================================== Atm_Corr_Refl ====================================
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- 0.65um (Rayleigh correction amount is based on 2.1um cloud                    
+      effecive radius retrieval)                                                    
+ 2 -- 0.86um                                                                        
+ 3 -- 1.2um                                                                         
+ 4 -- 1.6um                                                                         
+ 5 -- 2.1um                                                                         
+ 6 -- 3.7um                                                                         
+
+==================================== Cirrus_Reflectance_Flag ====================================
+0: bad data, 1: non-cirrus pixel, 2: cirrus pixel, 3: contrail pixel                
+
+==================================== Cloud_Height_Method ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS are set to mean the following:                              
+ 1 -- CO2-slicing retrieval, bands 36/35                                            
+ 2 -- CO2-slicing retrieval, bands 35/34                                            
+ 3 -- CO2-slicing retrieval, bands 35/33                                            
+ 4 -- CO2-slicing retrieval, bands 34/33                                            
+ 6 -- IR-window retrieval, band 31                                                  
+
+==================================== Cloud_Mask_1km ====================================
+See MODIS atmosphere QA plan for details                                            
+
+==================================== Cloud_Mask_5km ====================================
+\n                                                                                  
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+ First Byte                                                                         
+                                                                                    
+ bit field       Description                             Key                        
+ ---------       -----------                             ---                        
+                                                                                    
+ 0               Cloud Mask Flag                      0 = Not  determined           
+                                                      1 = Determined                
+                                                                                    
+ 2, 1            Unobstructed FOV Quality Flag        00 = Cloudy                   
+                                                      01 = Uncertain                
+                                                      10 = Probably  Clear          
+                                                      11 = Confident  Clear         
+                 PROCESSING PATH                                                    
+                 ---------------                                                    
+ 3               Day or Night Path                    0 = Night  / 1 = Day          
+ 4               Sunglint Path                        0 = Yes    / 1 = No           
+ 5               Snow/Ice Background Path             0 = Yes    / 1 = No           
+ 7, 6            Land or Water Path                   00 = Water                    
+                                                      01 = Coastal                  
+                                                      10 = Desert                   
+                                                      11 = Land                     
+                                                                                    
+ Second Byte                                                                        
+--------------------------------------------------------------------------          
+                                                                                    
+ 1, 0            Sun-glint Under CTP Retrieval        00 = No CTP Ret.              
+                                                      01 = No Sun-glint             
+                                                      10 = Sun-glint                
+                                                                                    
+ 3, 2            Snow/Ice Under CTP Retrieval         00 = No CTP Ret.              
+                                                      01 = No Snow/Ice              
+                                                      10 = Snow/Ice                 
+                                                                                    
+ 6, 5, 4         Surface Type Under CTP Retrieval    000 = No CTP Ret.              
+                                                     001 = Water                    
+                                                     010 = Coast                    
+                                                     011 = Desert                   
+                                                     100 = Land                     
+                                                     101 = Other                    
+                                                                                    
+ 7               Day/Night Flag Under CTP Retrieval   01 = Day                      
+                                                                                    
+
+==================================== Cloud_Multi_Layer_Flag ====================================
+\n                                                                                  
+                                                                                    
+ Flag for multi-layer multi-phase cloud situations. Values 2 through 9              
+ indicate the success of various multi-layer cloud tests. Value of 0                
+ indicates no retrieval, value of 1 indicates single layer cloud. The               
+ other values are of increasing confidence level.                                   
+
+==================================== Cloud_Phase_Infrared ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS indicate the following cloud phase:                         
+ 0 -- cloud free                                                                    
+ 1 -- water cloud                                                                   
+ 2 -- ice cloud                                                                     
+ 3 -- mixed phase cloud                                                             
+ 6 -- undetermined phase                                                            
+
+==================================== Cloud_Phase_Infrared_1km ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS indicate the following cloud phase:                         
+ 0 -- cloud free                                                                    
+ 1 -- water cloud                                                                   
+ 2 -- ice cloud                                                                     
+ 3 -- mixed phase cloud                                                             
+ 6 -- undetermined phase                                                            
+
+==================================== Cloud_Phase_Optical_Properties ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS are set to mean the following:                              
+ 0 -- cloud mask undetermined                                                       
+ 1 -- clear sky                                                                     
+ 2 -- liquid water cloud                                                            
+ 3 -- ice cloud                                                                     
+ 4 -- undetermined phase cloud (but retrieval is attempted as  liquid water)        
+
+==================================== Cloud_Top_Pressure_From_Ratios ====================================
+\n                                                                                  
+                                                                                    
+ Cloud top pressure level solutions in the following array locations:               
+ Band_Ratio:mod06 = 1:      MODIS bands 36/35                                       
+ Band_Ratio:mod06 = 2:      MODIS bands 35/34                                       
+ Band_Ratio:mod06 = 3:      MODIS bands 35/33                                       
+ Band_Ratio:mod06 = 4:      MODIS bands 34/33                                       
+ Band_Ratio:mod06 = 5:      Not used                                                
+
+==================================== Extinction_Efficiency_Ice ====================================
+Ice CE from the phase functions used to generate the forward lookup tables          
+
+==================================== Extinction_Efficiency_Liq ====================================
+Liquid Water CE from the phase functions used to generate the forward lookup tables 
+
+==================================== IRP_CTH_Consistency_Flag_1km ====================================
+\n                                                                                  
+
+==================================== Quality_Assurance_1km ====================================
+\n                                                                                  
+                                                                                    
+Quality Assurance 1km reports on Cloud Optical Properties                           
+algorithm performance.  Refer to MOD_PR06OD User Documentation and the              
+MODIS atmosphere QA plan for complete descriptions and coding examples.             
+                                                                                    
+ Bit fields within each byte are numbered from the left:                            
+ 7, 6, 5, 4, 3, 2, 1, 0.                                                            
+ The left-most bit (bit 7) is the most significant bit.                             
+ The right-most bit (bit 0) is the least significant bit.                           
+                                                                                    
+                                                                                    
+ Byte 0 -----------------------------------------------------------------           
+  0   VNSWIR-2.1 Optical Thickness General QA       0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1  VNSWIR-2.1 Optical Thickness Confidence QA   00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  4,3  Surface type used by the OD code        00 = ice-free ocean                  
+                                               01 = ice covered ocean               
+                                               10 = snow-free land                  
+                                               11 = snow covered land               
+  5   VNSWIR-2.1 Effective Radius General QA        0 = Not Useful                  
+                                                    1 = Useful                      
+  7,6 VNSWIR-2.1 Effective Radius Confidence QA     00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+ Byte 1 -----------------------------------------------------------------           
+  0   VNSWIR-2.1 Liquid Water Path General QA       0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1 VNSWIR-2.1 Liquid Water Path Confidence QA    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  5,4,3          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  6              1.6- 2.1 Retrieval Outcome          0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 2 -----------------------------------------------------------------           
+  2,1,0          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3           VNSWIR- 2.1 Retrieval Outcome          0 = Failed/No attempt          
+                                                    1 = Successful                  
+  4              Rayleigh Correction                0 = No Correction               
+                                                    1 = Correction                  
+  5              Water Vapor Correction             0 = No Correction               
+                                                    1 = Correction                  
+  7,6            Band Used for Optical Thickness Retrieval                          
+                                                    00 = No attempt                 
+                                                    01 = .645 micron                
+                                                    10 = .858 micron                
+                                                    11 = 1.24 micron                
+ Byte 3 -----------------------------------------------------------------           
+  0           Optical Thickness 1.6-2.1 General QA  0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1         Optical Thickness 1.6-2.1 Condifence QA                               
+                                                    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  3           Effective Radius 1.6-2.1 General QA   0 = Not Useful                  
+                                                    1 = Useful                      
+  5,4         Effective Radius 1.6-2.1 Confidence QA                                
+                                                    00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  7,6            Clear Sky Restoral Type QA                                         
+                                       00 = Not Restored                            
+                                       01 = Restored Via Edge detection             
+                                       10 = Restored Via Spatial  Variance          
+                                       11 = Restored Via 250m Tests                 
+ Byte 4 -----------------------------------------------------------------           
+  0           Water Path 1.6-2.1 General QA         0 = Not Useful                  
+                                                    1 = Useful                      
+  2,1         Water Path 1.6-2.1 Confidence QA      00 = No confidence              
+                                                    01 = Marginal                   
+                                                    10 = Good                       
+                                                    11 = Very Good                  
+  5,4,3          Multi Layer Cloud Flag      000 = Cloud Mask Undet                 
+                                             001 = Decision tree stop               
+                                             010 = single layer: water              
+                                             011 = multi layer: water               
+                                             100 = single layer: ice                
+                                             101 = multi layer: ice                 
+                                             110 = single layer:  unknown           
+                                             111 = multi layer: unknown             
+  7,6            spare                                                              
+ Byte 5 -----------------------------------------------------------------           
+  0              Phase difference multilayer test result                            
+  1              Delta precipitable water multilayer test result                    
+  2              Delta precipitable water at 900mb multilayer  test result          
+  3              Tau difference VNSWIR-SWIR multilayer test result                  
+  4              Pavolonis-Heidinger multilayer test result                         
+  7,6,5            spare                                                            
+ Byte 6 -----------------------------------------------------------------           
+  2,1,0        Retrieval Phase                      000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3            VNSWIR- 1.6 Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  6,5,4    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 1.6 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 7 -----------------------------------------------------------------           
+  2,1,0        Retrieval Phase                      000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3            VNSWIR- 3.7 Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  6,5,4    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 3.7 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+ Byte 8 -----------------------------------------------------------------           
+  2,1,0          Retrieval Phase                    000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  3           1.6- 2.1 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+  6,5,4    Retrieval Phase                          000 = No Cloud Mask             
+                                                    001 = No Cloud                  
+                                                    010 = Water Cloud               
+                                                    011 = Ice Cloud                 
+                                                    100 = Unknown Cloud             
+  7        VNSWIR- 2.1 PCL Retrieval Outcome         0 = Failed/No attempt          
+                                                    1 = Successful                  
+
+==================================== Quality_Assurance_5km ====================================
+See MODIS atmosphere QA plan for details                                            
+
+==================================== Retrieval_Failure_Metric ====================================
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+==================================== Retrieval_Failure_Metric_16 ====================================
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+==================================== Retrieval_Failure_Metric_1621 ====================================
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+==================================== Retrieval_Failure_Metric_37 ====================================
+\n                                                                                  
+                                                                                    
+ The individual planes in this SDS are set to contain the following:                
+ 1 -- Cloud Optical Thickness                                                       
+ 2 -- Cloud Effective Radius                                                        
+ 3 -- Relative distance of failed retrieval from the library space as               
+      percentage of reflectance                                                     
+
+==================================== Single_Scatter_Albedo_Ice ====================================
+Ice single scatter albedo from the phase functions used to generate the forward look
+
+==================================== Single_Scatter_Albedo_Liq ====================================
+Liquid Water SSA from the phase functions used to generate the forward lookup tables
+
+==================================== Spectral_Cloud_Forcing ====================================
+\n                                                                                  
+                                                                                    
+ Spectral cloud forcing, cloudy-clear radiance, each channel in order:              
+ 36, 35, 34, 33 and 31 for Band_Forcing dimension reference                         
+
+==================================== cloud_top_method_1km ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS are set to mean the following:                              
+ 1 -- CO2-slicing retrieval, bands 36/35                                            
+ 2 -- CO2-slicing retrieval, bands 35/34                                            
+ 3 -- CO2-slicing retrieval, bands 35/33                                            
+ 4 -- CO2-slicing retrieval, bands 34/33                                            
+ 6 -- IR-window retrieval, band 31                                                  
+
+==================================== os_top_flag_1km ====================================
+\n                                                                                  
+                                                                                    
+ The values in this SDS indicate the following:                                     
+ 0 -- stratospheric cloud test not performed                                        
+ 1 -- stratospheric cloud not indicated                                             
+ 2 -- stratospheric cloud indicated (BTD35-33 > 0.5K)                               
+
+/pampa/poitras/DATA/MYD06_L2/NetCDF/2014/MYD06_L2_20140105_1900.nc~
