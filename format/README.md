@@ -71,7 +71,7 @@ Note:  Le module python **fstd2nc** est utilisé au lieu du plus conventionnel *
 &nbsp;
 #### 2. main_CALIPSO_01_format.bash
 ##### Soumission
->./submit_CALIPSO_01_format.bash YYYYi YYYYf overwrite submission_type`
+>`./submit_CALIPSO_01_format.bash YYYYi YYYYf overwrite submission_type`
 - **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
 - **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
 - **overwrite** [true/false]:  
@@ -100,7 +100,7 @@ Note: Dans le fichier original, l'attribut valid_range est une chaine de caract�
 &nbsp;
 #### 3. main_CALIPSO_02_makefilelist.bash
 ##### Soumission
->./submit_CALIPSO_02_makefilelist.bash YYYYi YYYYf submission_type`
+>`./submit_CALIPSO_02_makefilelist.bash YYYYi YYYYf submission_type`
 - **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
 - **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
 - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
