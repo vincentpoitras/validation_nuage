@@ -7,10 +7,6 @@ import math
 import os.path
 import netCDF4
 import numpy as np
-sys.path.append('/home/poitras/SCRIPTS/mes_modules_python')
-sys.path.append('/home/poitras/SCRIPTS/COSP2')
-from cosp2_figure_module import generate_domain_coord
-from cosp2_figure_module import extract_satellite_track
 from   shapely.geometry         import Point
 from   shapely.geometry.polygon import Polygon
 

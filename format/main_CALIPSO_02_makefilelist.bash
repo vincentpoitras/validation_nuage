@@ -27,6 +27,20 @@ config=$working_directory/../config.yml
 cd $working_directory
 
 
+
+###########################################################################
+# Reading the configuration file  / Creating output directory             #
+###########################################################################
+# Reading the path for the
+#       * Output directory
+
+config='../config.yml'
+args="'$config', 'CALIPSO  list'"
+dir_list=$(python -c "import yamlmanip; yamlmanip.extract_value($args);")
+
+[ -d $dir_list ] || mkdir -p $dir_list
+
+
 ###########################################################################
 # Auxiliary script                                                        #
 ###########################################################################
