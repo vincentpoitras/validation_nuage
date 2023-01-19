@@ -90,7 +90,7 @@ Une tâche correspond à traiter toutes les données d'une année.
 Effectue la conversion des fichiers hdf en NetCDF en utilisant **h4tonccf_nc4**. 
 
 Note: Dans le fichier original, l'attribut valid_range est une chaine de caractère formé de 2 nombres séparés par trois points (...). Ce format non-standard peut créer certains bogues lors de la manipulation subséquente des fichiers NetCDF. Cet attribut est donc modifié en utilisant **aux_CALIPSO_format_attributes.py**
-> Latitude:valid_range = "-90.0...90.0" ; (original)
+> Latitude:valid_range = "-90.0...90.0" ; (original)  
 > Latitude:valid_range = -90., 90. ;  (modifié)
 
 ##### Références
