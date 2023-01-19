@@ -41,7 +41,7 @@ Par ailleur, à partir de l'étape 02 pour les jeux de données CALIPSO et MODIS
 &nbsp;
 # Description détaillée des scripts
 
-#### main_GEM5_01_format.bash
+#### 1. main_GEM5_01_format.bash
 
 ##### Soumission
 >`./submit_GEM5_01_format.bash YYYYMMi YYYYMMf overwrite submission_type`
@@ -69,14 +69,14 @@ Note:  Le module python **fstd2nc** est utilisé au lieu du plus conventionnel *
 
 
 &nbsp;
-#### main_CALIPSO_01_format.bash
+#### 2. main_CALIPSO_01_format.bash
 ##### Soumission
->`./submit_CALIPSO_01_format.bash YYYYi YYYYf overwrite submission_type`
+>./submit_CALIPSO_01_format.bash YYYYi YYYYf overwrite submission_type`
 - **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
 - **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
 - **overwrite** [true/false]:  
-&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes. 
-&nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompues. 
+&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes.  
+&nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompues.  
 - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
 Une tâche correspond à traiter toutes les données d'une année.
@@ -84,7 +84,7 @@ Une tâche correspond à traiter toutes les données d'une année.
 ##### Scripts auxillaires
   - yamlmanip.py (lien vers ../yamlmanip.py)
   - h4tonccf_nc4
-  - aux_CALIPSO_format_attributes.py
+  - auxCALIPSO_format_attributes.py
 
 ##### Description
 Effectue la conversion des fichiers hdf en NetCDF en utilisant **h4tonccf_nc4**. 
@@ -97,10 +97,51 @@ Note: Dans le fichier original, l'attribut valid_range est une chaine de caract�
   - h4tonccf_nc4: http://hdfeos.org/software/h4cflib.php
 
 
+&nbsp;
+#### 3. main_CALIPSO_02_makefilelist.bash
+##### Soumission
+>./submit_CALIPSO_02_makefilelist.bash YYYYi YYYYf submission_type`
+- **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
+- **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
+- **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
+
+Une tâche correspond à traiter toutes les données d'une année. 
+Si la liste à créé existe déjà, il sera demandé lors de la soumission si on doit l'écraser.
+
+##### Scripts auxillaires
+  - yamlmanip.py (lien vers ../yamlmanip.py)
+  - aux_CALIPSO_check_if_track_is_inside.py
+
+##### Description
+Identifie les fichiers contenant des portions de trajectoire passant au-dessus du domain (de la simulation GEM5) et crée un liste de ceux-ci. La liste comporte 8 colonnes:
+> fichier &nbsp; nray &nbsp; datei &nbsp; datef &nbsp; date_calispo &nbsp; MM &nbsp; date_gem  &nbsp; npas_gem 
+  - **fichier**: Chemin complet vers le fichier
+  - **nray**: nombre de profils verticaux mesurées
+  - **datei**: date [YYYYMMDDhhmmss] à laquelle la trajectoire du satellite entre dans le domaine
+  - **datef**: date [YYYYMMDDhhmmss] à laquelle la trajectoire du satellite sort du le domaine
+  - **date_calipso**:  date [YYYYMMDDhh00] associé à l'intervalle [datei,datef], arrondie à l'heure la plus près.
+  - **MM**: mois extrait de date_calipso
+  - **date_gem** : date [YYYYMMDD] apparaissant dans le fichier GEM5 contenant la date date_calipso
+  - **npas_gem**: pas de temps (0 à 23) du fichier GEM5 correspondant à date_calipso 
+ 
+ Note: les valeurs reliées à GEM5 ne sont évidemment pas nécessaire en soi pour traiter les données de CALIPSO, par contre elles vont être utile à trouver le fichier et le pas de temps correspondant lorsqu'on voudra comparé GEM5 et CALIPSO.
+ 
+ Exemple 
+ > chemin/fichier.nc  &nbsp; 166  &nbsp; 20140101032117 &nbsp; 20140101032320 &nbsp;  201401010300 &nbsp; 01 &nbsp; 20140101  &nbsp; 2
+ 
+
+- Le satellite arrive au-dessus du domaine le 2014-01-01 à 03h21'17" et il sort le 2014-01-01 à 03h23'20".
+- Durant cet intervalle, 166 profils verticaux ont été mesurés
+- La date arrondie à l'heure près associé à cet intervalle est 2014-01-01 03h00' (car entierement située entre 02h30'00" et 03h29'59"). Lorsque datei et datef sont situés de par et d'autre d'une demi-heure (??h30), l'heure associée au "demi-inetrvalle" le plus grand est choisie.
+- Le mois de la date arrondie est janvier (01). 
+ &nbsp;
+- Les fichiers quotidiens gem sont 'labelés' par la date du jour (YYYYMMDD), mais contiennent en fait une plage horaire qui commence à 01H et se termine à 00H le jour suivant. Les parties année+mois+quantième de date_gem et date_calispo seront identiques si l'heure se situe entre 01h00' et 23h00' (comme dans cette exemple, ce qui donne date_gem=20140101). Si on avait eu date_calipso=201401010000, alors dans ce cas cela aurait donné date_gem=20131231. En résumé, pour trouver la date 2014-01-01 03h00' dans un fichier gem, il faut donc choisir le fichier ...20140101d.nc  et le pas de temps 2 (en python on commence à compter à 0: 0-->01h00', 1-->02h00', 03-->03h00')
+ 
+À noter: chaque profil vertical est identifié par une latitude, une longitude et une date. Puisque le satellite se déplace pendant une mesure, chacune de ses trois quantités comportent 3 valeurs (au début de la mesure, au milieu de la mesure, ;a la fin de la mesure). Tous les calculs sont basés sur la valeur du milieu de meeure.
+
 
 &nbsp;
 &nbsp;
-- main_CALIPSO_02_makefilelist.bash
 - main_MODIS_01_format.bash
 - main_MODIS_02_interpolate_and_merge.bash
 - main_MODIS_03_merge_MOD06_and_MYD06.bash
@@ -110,29 +151,8 @@ Note: Dans le fichier original, l'attribut valid_range est une chaine de caract�
 
 
 
-# CALISPO
-
-## Description
-Effectue la converstion des fichiers hdf vers Netcdf
-Corrige un problème au niveau des attribut
-
-## Liste des fichiers
-  - CALIPSO\_format.bash (driver)
-  - h4tonccf\_nc4 (hdf --> NetCDF)
-  - calipso\_fix\_attribute\_problem.py
-
-## Exemple de soumission:  
-YYYY=2014; soumet CALIPSO\_format.bash \-args &nbsp;$YYYY \-jn CALIPSO\_format\_\${YYYY} \-t 86400
 
 
-## Notes:
-  1. L'attribut valid\_range est originellement donné par une chaine de caractère, formée de 2 nombres
-  séparés par 3 points ... Ce format fait planter d'autres outils. On formate donc la valeur de
-  valid\_range en un array (format beaucoup plus standard)
-  2. Les réperoires d'entrées et de sortie sont "hardcodé" dans le script mais peut évidemment
-  être édité au besoin.
-  3. Si on relance le script, les anciens fichiers de sortie sont simplement écrasés.
-"README.md" 58L, 2076C                                                                                                                                                                    1,6           Top
 
 
 
