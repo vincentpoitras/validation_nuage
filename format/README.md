@@ -45,12 +45,12 @@ Par ailleur, à partir de l'étape 02 pour les jeux de données CALIPSO et MODIS
 
 ##### Soumission
 >`./submit_GEM5_01_format.bash YYYYMMi YYYYMMf overwrite submission_type`
-- **YYYYMMi**: Date de début de l'intervalle des données à traiter (année + mois).
-- **YYYYMMf**: Date de fin de l'intervalle des données à traiter (année + mois).
-- **overwrite** [true/false]:  
+> - **YYYYMMi**: Date de début de l'intervalle des données à traiter (année + mois).
+> - **YYYYMMf**: Date de fin de l'intervalle des données à traiter (année + mois).
+> - **overwrite** [true/false]:  
 &nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes. 
 &nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus. 
-- **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
+> - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
 Une tâche consiste à tariter tous les fichiers d'un répertoire mensuel.
 
@@ -72,12 +72,12 @@ Note:  Le module python **fstd2nc** est utilisé au lieu du plus conventionnel *
 #### [B1] main_CALIPSO_01_format.bash
 ##### Soumission
 >`./submit_CALIPSO_01_format.bash YYYYi YYYYf overwrite submission_type`
-- **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
-- **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
-- **overwrite** [true/false]:  
+> - **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
+> - **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
+> - **overwrite** [true/false]:  
 &nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes.  
 &nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus.  
-- **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
+> - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
 Une tâche correspond à traiter toutes les données d'une année.
 
@@ -101,9 +101,9 @@ Dans le fichier original, l'attribut _valid_range_ est une chaine de caractère 
 #### [B2] main_CALIPSO_02_makefilelist.bash
 ##### Soumission
 >`./submit_CALIPSO_02_makefilelist.bash YYYYi YYYYf submission_type`
-- **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
-- **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
-- **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
+> - **YYYYi**: Date de début de l'intervalle des données à traiter (année seule).
+> - **YYYYf**: Date de fin de l'intervalle des données à traiter (année seule).
+> - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
 Une tâche correspond à traiter toutes les données d'une année. 
 Si la liste à créé existe déjà, il sera demandé lors de la soumission si on doit l'écraser.
