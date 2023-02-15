@@ -35,10 +35,21 @@ working_directory=$(pwd)
 # Auxiliary script                                                        #
 ###########################################################################
 # python script used to do basic manipulations on yaml files
+yamlmanip=$working_directory/../yamlmanip.py
 if [ -f $yamlmanip ]; then
         ln -sf ../yamlmanip.py
 else
         echo "[ERROR] $working_directory/../yamlmanip.py should exist and does not"
+        echo "[ERROR] Exit"
+        exit
+fi
+
+
+netcdf4_extra=$working_directory/../netcdf4_extra.py
+if [ -f $netcdf4_extra ]; then
+        ln -sf ../netcdf4_extra.py
+else
+        echo "[ERROR] $working_directory/../netcdf4_extra.py should exist and does not"
         echo "[ERROR] Exit"
         exit
 fi

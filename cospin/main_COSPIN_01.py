@@ -15,8 +15,7 @@ import glob
 import netCDF4
 import os
 
-import sys;                       sys.path.append('/home/poitras/SCRIPTS/mes_modules_python')
-from   netcdf4_extra              import netcdf4_extract_fields_and_attributes
+from   netcdf4_extra import netcdf4_extract_fields_and_attributes
 from   aux_COSPIN_01 import add_time_dimension
 from   aux_COSPIN_01 import format_time_for_sunlit
 from   aux_COSPIN_01 import sunlit

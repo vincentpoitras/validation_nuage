@@ -1,6 +1,9 @@
 #!/bin/bash
 
-
+# info: vincent.poitras@ec.gc.ca
+# date: 2023-02
+# description: "wrapper" pour lancer les cript python main_COSPIN_01.py
+#              C,est plus simple de soumettre un "wrapper" à travers l'ordonnanceur que le script python directement
 
 
 ###########################################################################

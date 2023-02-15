@@ -10,7 +10,10 @@ CALIPSO:
         list  : /pampa/poitras/DATA/CALIPSO/CAL_LID_L2_05kmCPro-Standard-V4/list
 
 MODIS:
-        hdf   : /pampa/poitras/DATA/MODIS/MXD06_L2/hdf    # MXD06 stand for MOD06, MYD06
-        NetCDF: /pampa/poitras/DATA/MODIS/MXD06_L2/NetCDF # MXD06 stand for MOD06, MYD06, MCD06
-        list  : /pampa/poitras/DATA/MODIS/MXD06_L2/list   # MXD06 stand for MOD06, MYD06, MCD06
+        hdf   : /pampa/poitras/DATA/MODIS/MXD06_L2/hdf    # MXD06 stands for MOD06, MYD06         # MXD06_L2 must be kept in the name
+        NetCDF: /pampa/poitras/DATA/MODIS/MXD06_L2/NetCDF # MXD06 stands for MOD06, MYD06, MCD06  # MXD06_L2 must be kept in the name
+        list  : /pampa/poitras/DATA/MODIS/MXD06_L2/list   # MXD06 stands for MOD06, MYD06, MCD06  # MXD06_L2 must be kept in the name
 
+COSP2:   
+        input : /pampa/poitras/DATA/COSP2/COSPIN/COSP2_NAM-11m_ERA5_GEM5_CLASS_NEWVEG_newP3-SCPF_SN_Lakes
+        output: /pampa/poitras/DATA/COSP2/COSPOUT/COSP2_NAM-11m_ERA5_GEM5_CLASS_NEWVEG_newP3-SCPF_SN_Lakes

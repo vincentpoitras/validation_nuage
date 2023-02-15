@@ -5,9 +5,9 @@
 #       Discussions from our "COSP group" (Faisal Boudala, Mélissa Cholette.Jason Milbrant,Vincent Poitras, Zhipeng Qu)
 #       also help to develop this script.
 
-import matplotlib.pyplot as     plt
-import numpy as np
-from   datetime          import datetime
+import matplotlib.pyplot as plt
+import numpy             as np
+from   datetime import datetime
 import netCDF4
 
 
