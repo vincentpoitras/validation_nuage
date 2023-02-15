@@ -149,7 +149,7 @@ Identifie les fichiers contenant des portions de trajectoire passant au-dessus d
 > - **YYYYMMf**: Date de fin de l'intervalle des données à traiter (année + mois).
 > - **dataset**: [MYD06_L2/MOD06_L2]
 > - **overwrite** [true/false]:  
-&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes. 
+&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes.    
 &nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus. 
 >- **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
