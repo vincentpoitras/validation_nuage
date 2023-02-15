@@ -48,7 +48,7 @@ Par ailleur, à partir de l'étape 02 pour les jeux de données CALIPSO et MODIS
 > - **YYYYMMi**: Date de début de l'intervalle des données à traiter (année + mois).
 > - **YYYYMMf**: Date de fin de l'intervalle des données à traiter (année + mois).
 > - **overwrite** [true/false]:  
-&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes. 
+&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes.   
 &nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus. 
 > - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
