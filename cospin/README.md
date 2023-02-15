@@ -19,7 +19,7 @@ Le script principal `main_COSPIN_01.py` étant en python, il a été plus simple
 &nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus.    
 - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
-**Note 1**: Une tâche consiste à traiter tous les fichiers d'un répertoire mensuel.
+**Note 1**: Une tâche consiste à traiter tous les fichiers d'un répertoire mensuel.    
 **Note 2**: L'idée derrière la productions de données avec **COSP2** est de pouvoir comparer les observations à la simulation. Il n'est donc pas nécessaire de traiter tous les pas de temps, seuelement ceux pour lesquelles des données observationelles sont disponibles. On spécifie le jeu de donnée désiré lors de la soumission (*dataset*) et le script ira lire les pas de temps à traiter dans le fichier correspondant (produit lors de l'étape de formatage des données). Des pas de temps peuvent évidemment être communs à différents jeux de données et ils ne sont traités qu'une seule fois (si *overwrite*=*false*). Si *dataset*=*ALL_STEPS*, tous les pas de temps seront traités (l'implémentation de cette option n'est pas encore complètement terminée)
 
 # Descriptions
