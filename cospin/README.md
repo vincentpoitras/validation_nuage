@@ -15,8 +15,8 @@ Le script principal `main_COSPIN_01.py` étant en python, il a été plus simple
 - **YYYYMMf**: Date de fin de l'intervalle des données à traiter (année + mois).
 - **dataset** [CALIPSO/MYD06_L2/MOD06_L2/MCD06_L2/ALL_STEPS]: Liste contenant les pas de temps où les observations sont disponibles.
 - **overwrite** [true/false]:  
-&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes. 
-&nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus. 
+&nbsp;&nbsp;&nbsp;&nbsp; 'true': lors d'une resoumission, écrase les données déjà existantes.    
+&nbsp;&nbsp;&nbsp;&nbsp; 'false': ne traite que les fichiers manquants ou corrompus.    
 - **submission_type** [interactive/scheduler]: Soumettre la tâche interactivement ou en passant par l'ordonannceur.
 
 **Note 1**: Une tâche consiste à traiter tous les fichiers d'un répertoire mensuel.
