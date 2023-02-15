@@ -12,14 +12,15 @@
   3. format 
     - GEM5   : fst --> NetCDF
     - CALISPO: hdf --> NetCDF
-    - MODIS  : hdf --> NetCDF (à venir)
+    - MODIS  : hdf --> NetCDF 
 
-  4. cosp2_input (à venir)
+  4. cospin
     - Généreration des fichiers d'entrée nécessaire pour faire rouler COSP2 (à partir des données de GEM5)
 
-  5. cosp2_output (à venir)
+  5. cospout (à venir)
     - Configuration de COSP2
 
   6. analysis_and_figures (à venir)
     - Scripts utilisés pour l'analyse et la production de figures
 </pre>
+
