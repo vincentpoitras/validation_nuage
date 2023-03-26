@@ -20,3 +20,5 @@ Il faut aussi s'assurer que les chemins vers les librairies sont correctement d�
 
 La compilation peut maintenant être lancée:  
 > ./Makefile  
+
+test
