@@ -12,7 +12,7 @@ https://github.com/CFMIP/COSPv2.0
 ### Compilation  
 
 Avant de lancer la compilation, il faut ajouter les bonnes librairies au fichier de configuration de compilation:
-`COSPv2.0/build/Makefile.conf`.  
+`COSPv2.0/build/Makefile.conf`  
 
 Par exemple 
 ![](https://github.com/vincentpoitras/validation_nuage/blob/master/cospout/images/Makefile.conf.png)
@@ -23,5 +23,5 @@ Il faut aussi s'assurer que les chemins vers les librairies sont correctement d�
 > `export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/x86_64-linux-gnu`  
 
 La compilation peut maintenant être lancée:  
-> ./Makefile  
+> `./Makefile`  
 
