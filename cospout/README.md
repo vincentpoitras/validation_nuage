@@ -4,15 +4,18 @@
 # Répertoire COSPv2.0  
 
 ### Description
-Le contenu du répertoire COSPv2.0 est une version simplifiée du répertoire original qu'on peut télécharger ici:   
+Le répertoire COSPv2.0 contient le code de COSP2 ainsi que des exemples. Il a été téléchargé à aprtir de la source offciel: 
 https://github.com/CFMIP/COSPv2.0   
 
 
 
 ### Compilation  
 
-Avant de lancer la compilation, il faut ajouter les bonnes librairies au fichier de configuration de compilation (` .../COSPv2.0/build/Makefile.conf`), par exemple:  
-![](./images/makefiles.png)  
+Avant de lancer la compilation, il faut ajouter les bonnes librairies au fichier de configuration de compilation:
+`COSPv2.0/build/Makefile.conf`.  
+
+Par exemple 
+![](https://github.com/vincentpoitras/validation_nuage/blob/master/cospout/images/Makefile.conf.png)
 
 
 Il faut aussi s'assurer que les chemins vers les librairies sont correctement définis dans les variables d'environnement  
@@ -22,6 +25,3 @@ Il faut aussi s'assurer que les chemins vers les librairies sont correctement d�
 La compilation peut maintenant être lancée:  
 > ./Makefile  
 
-test
-
-![](https://github.com/vincentpoitras/validation_nuage/blob/master/cospout/images/Makefile.conf.png)
