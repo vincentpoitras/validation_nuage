@@ -4,7 +4,7 @@
 # Répertoire COSPv2.0  
 
 ### Description
-Le répertoire COSPv2.0 contient le code de COSP2 ainsi que des exemples. Il a été téléchargé à aprtir de la source offciel: 
+Le répertoire COSPv2.0 contient le code de COSP2 ainsi que des exemples. Il a été téléchargé à aprtir de la source offcielle: 
 https://github.com/CFMIP/COSPv2.0   
 
 
