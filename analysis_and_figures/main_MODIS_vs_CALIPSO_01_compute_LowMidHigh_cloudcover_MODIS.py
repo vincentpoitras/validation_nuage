@@ -152,7 +152,7 @@ stream = open(yml_file,'r')
 config = yaml.safe_load(stream)
 
 domain  = config['domain']
-dirout  = config['MODIS']['NetCDF'].replace('MXD06_L2',dataset) + '_LowMidHigh' 
+dirout  = config['MODIS']['NetCDF'].replace('MXD06_L2',dataset) + '_LowMidHigh' + '/' + domain 
 dirlist = config['MODIS']['list'  ].replace('MXD06_L2',dataset) + '/' + domain
 
 
