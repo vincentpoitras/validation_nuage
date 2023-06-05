@@ -107,7 +107,7 @@ while [ $YYYYMM -le $YYYYMMf ]; do
 	args="$working_directory $YYYYMM $dataset $overwrite"
 
 	if [[ $submission_type == scheduler ]]; then
-		soumet $script -args $args -jn MODIS_LowMidHigh_cloudcover_$YYYYMM #-t 111600
+		soumet $script -args $args -jn ${dataset}_LowMidHigh_cloudcover_$YYYYMM #-t 111600
 	elif [[ $submission_type == interactive ]]; then
 		$script $args 
 	else
