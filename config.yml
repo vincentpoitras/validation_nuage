@@ -17,3 +17,7 @@ MODIS:
 COSP2:   
         input : /pampa/poitras/DATA/COSP2/COSPIN/COSP2_NAM-11m_ERA5_GEM5_CLASS_NEWVEG_newP3-SCPF_SN_Lakes
         output: /pampa/poitras/DATA/COSP2/COSPOUT/COSP2_NAM-11m_ERA5_GEM5_CLASS_NEWVEG_newP3-SCPF_SN_Lakes
+
+CALIPSOvsMODIS:
+        NetCDF: /pampa/poitras/DATA/CALIPSOvsMODIS/NetCDF
+        png   : /pampa/poitras/DATA/CALIPSOvsMODIS/png
